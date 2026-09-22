@@ -6,6 +6,6 @@
     <title>.: pagina :. </title>
 </head>
 <body>
-  <h1 align="center">ronaldo</h1>
+  <h1 style="text-align: center;">ronaldo</h1>
 </body>
 </html>
