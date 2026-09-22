@@ -4,4 +4,4 @@ use CodeIgniter\Router\RouteCollection;
 
 /** @var RouteCollection $routes */
 $routes->get('/', 'Home::index');
-$routes->get('/ronaldo','home::ronaldo');
+$routes->get('/ronaldo','Home::ronaldo');
