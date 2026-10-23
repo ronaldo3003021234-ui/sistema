@@ -56,3 +56,5 @@ in APPPATH\Views\contato.php on line 3.
 10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
 11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
 12 SYSTEMPATH\rewrite.php(44): require_once('C:\\Users\\ronal\\OneDrive\\Documentos\\codeigniter4-framework-v4.7.4-0-g67ead89\\sistema\\public\\index.php')
+DEBUG - 2026-10-23 11:52:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2026-10-23 11:52:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
