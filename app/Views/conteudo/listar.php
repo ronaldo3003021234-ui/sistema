@@ -1,87 +1,44 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteúdos</title>
-</head>
-<body>
-    <h1>Conteúdos cadastrados</h1>
+<?= $this->extend('layout/main') ?>
+
+<?= $this->section('conteudo') ?>
+<div class="card shadow-sm p-4 bg-white rounded">
+    <h1 class="mb-3 text-primary">Conteúdos Cadastrados</h1>
 
     <?php if ($mensagem = session()->getFlashdata('mensagem')): ?>
-        <p><?= esc($mensagem) ?></p>
+        <div class="alert alert-success" role="alert">
+            <?= esc($mensagem) ?>
+        </div>
     <?php endif; ?>
 
     <?php if (empty($conteudos)): ?>
-        <p>Nenhum conteúdo encontrado.</p>
+        <div class="alert alert-warning" role="alert">Nenhum conteúdo encontrado.</div>
     <?php else: ?>
-        <table border="1" cellpadding="8">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Título</th>
-                    <th>Texto</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($conteudos as $item): ?>
+        <div class="table-responsive">
+            <table class="table table-striped table-hover align-middle">
+                <thead class="table-dark">
                     <tr>
-                        <td><?= esc($item['Id']) ?></td>
+                        <th>Id</th>
+                        <th>Título</th>
+                        <th>Texto</th>
+                        <th class="text-center">Ação</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <?php foreach ($conteudos as $item): ?>
+                    <tr>
+                        <td><strong><?= esc($item['Id']) ?></strong></td>
                         <td><?= esc($item['Titulo']) ?></td>
                         <td><?= nl2br(esc($item['Texto'] ?? '')) ?></td>
-                        <td>
-                            <a href="<?= site_url('conteudos/editar/'. $item['Id']) ?>">
+                        <td class="text-center">
+                            <a href="<?= site_url('conteudos/editar/'. $item['Id']) ?>" class="btn btn-sm btn-outline-primary">
                                 Editar
                             </a>
                         </td>
                     </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
+                    <?php endforeach; ?>
+                </tbody>
+            </table>
+        </div>
     <?php endif; ?>
-</body>
-</html><!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conteúdos</title>
-</head>
-<body>
-    <h1>Conteúdos cadastrados</h1>
-
-    <?php if ($mensagem = session()->getFlashdata('mensagem')): ?>
-        <p><?= esc($mensagem) ?></p>
-    <?php endif; ?>
-
-    <?php if (empty($conteudos)): ?>
-        <p>Nenhum conteúdo encontrado.</p>
-    <?php else: ?>
-        <table border="1" cellpadding="8">
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Título</th>
-                    <th>Texto</th>
-                    <th>Ação</th>
-                </tr>
-            </thead>
-            <tbody>
-                <?php foreach ($conteudos as $item): ?>
-                    <tr>
-                        <td><?= esc($item['Id']) ?></td>
-                        <td><?= esc($item['Titulo']) ?></td>
-                        <td><?= nl2br(esc($item['Texto'] ?? '')) ?></td>
-                        <td>
-                            <a href="<?= site_url('conteudos/editar/'. $item['Id']) ?>">
-                                Editar
-                            </a>
-                        </td>
-                    </tr>
-                <?php endforeach; ?>
-            </tbody>
-        </table>
-    <?php endif; ?>
-</body>
-</html>
+</div>
+<?= $this->endSection() ?>

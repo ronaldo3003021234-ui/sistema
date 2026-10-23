@@ -26,11 +26,7 @@ class Paths
      * This must contain the name of your "system" folder. Include
      * the path if the folder is not in the same directory as this file.
      */
-<<<<<<< HEAD
     public string $systemDirectory = __DIR__ . '/../../system';
-=======
-    public string $systemDirectory = __DIR__ . '/../../vendor/codeigniter4/framework/system';
->>>>>>> 7c970552b8bc04963785957c1b9755aef21c4128
 
     /**
      * ---------------------------------------------------------------
