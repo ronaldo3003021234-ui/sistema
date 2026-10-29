@@ -4,7 +4,7 @@
 <div class="card shadow-sm p-4 bg-white rounded">
     <h1 class="mb-3 text-primary">Conteúdos Cadastrados</h1>
 
-    <?php if ($mensagem = session()->getFlashdata('mensagem')): ?>
+ <?php if ($mensagem = session()->getFlashdata('mensagem')): ?>
         <div class="alert alert-success" role="alert">
             <?= esc($mensagem) ?>
         </div>
