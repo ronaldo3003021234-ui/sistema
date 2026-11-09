@@ -28,6 +28,18 @@
                         Contato
                     </a>
                 </li>
+
+                <!-- Links de Autenticação / Acesso -->
+                <li class="nav-item">
+                    <a href="<?= site_url('login') ?>" class="nav-link px-3 rounded <?= url_is('login') ? 'active bg-success text-white shadow-sm' : 'text-light' ?>">
+                        Login
+                    </a>
+                </li>
+                <li class="nav-item">
+                    <a href="<?= site_url('register') ?>" class="nav-link px-3 rounded <?= url_is('register') ? 'active bg-secondary text-white shadow-sm' : 'text-light' ?>">
+                        Registrar
+                    </a>
+                </li>
             </ul>
         </div>
     </div>

@@ -21,7 +21,6 @@
             </button>
         </form>
     </nav>
-
     <main class="container">
         <h1>Painel administrativo</h1>
         <p>Escolha uma opção no menu para continuar.</p>
