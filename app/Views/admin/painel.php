@@ -11,19 +11,19 @@
         <a href="<?= site_url('admin') ?>" class="nav-link active">
             Painel
         </a>
-        <a href="<?= site_url('conteudos') ?>" class="nav-link">
+        <a href="<?= site_url('admin/conteudos') ?>" class="nav-link">
             Conteúdos
         </a>
         <form action="<?= site_url('admin/sair') ?>" method="post" class="logout-form">
             <?= csrf_field() ?>
-            <button type="submit" class="nav-link logout-button">
+            <button type="submit" class="logout-button">
                 Sair
             </button>
         </form>
     </nav>
     <main class="container">
         <h1>Painel administrativo</h1>
-        <p>Escolha uma opção no menu para continuar.</p>
+        <p>Seja bem-vindo à área restrita. Escolha uma opção acima no menu para gerenciar o sistema com segurança.</p>
     </main>
 </body>
 </html>

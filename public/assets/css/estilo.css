@@ -8,3 +8,61 @@
     font: inherit;
     cursor: pointer;
 }
+/* Estilos modernos para o Painel Administrativo */
+.navbar {
+    background-color: #343a40;
+    padding: 1rem 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1.5rem;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+}
+
+.nav-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background 0.2s;
+}
+
+.nav-link:hover, .nav-link.active {
+    background-color: #495057;
+}
+
+.logout-form {
+    margin-left: auto;
+}
+
+.logout-button {
+    border: 0;
+    background: #dc3545;
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    font: inherit;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.logout-button:hover {
+    background: #bd2130;
+}
+
+.container {
+    max-width: 900px;
+    margin: 2rem auto;
+    background: #fff;
+    padding: 2rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+}
+
+h1 {
+    color: #343a40;
+    font-size: 1.8rem;
+    border-bottom: 2px solid #eaeaea;
+    padding-bottom: 0.5rem;
+    margin-top: 0;
+}
