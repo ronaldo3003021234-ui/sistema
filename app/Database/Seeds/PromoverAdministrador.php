@@ -10,7 +10,8 @@ class PromoverAdministrador extends Seeder
     public function run()
     {
         $users = auth()->getProvider();
-        $user  = $users->findByCredentials([
+
+        $user = $users->findByCredentials([
             'email' => 'ronaldo3003021234@gmail.com',
         ]);
 

@@ -2,19 +2,15 @@
 
 use CodeIgniter\Router\RouteCollection;
 
-/**
- * @var RouteCollection $routes
- */
+/** @var RouteCollection $routes */
+$routes->get('/', 'Home::index');
+$routes->get('/home', 'ConteudoController::index');
+$routes->get('/contato', 'ConteudoController::contato');
 
-// Rotas padrão do Shield (mantenha se o assistente já incluiu)
+// Rotas padrão do CodeIgniter Shield
 service('auth')->routes($routes);
 
-// Rotas públicas
-$routes->get('/', 'Home::index');
-$routes->get('home', 'ConteudoController::index');
-$routes->get('contato', 'ConteudoController::contato');
-
-// Rotas que exigem autenticação por sessão
+// Rotas protegidas que exigem autenticação por sessão (Listagem e Edição de Conteúdos)
 $routes->group('', ['filter' => 'session'], static function ($routes) {
     $routes->get('conteudos', 'ConteudoController::listar');
     $routes->get('conteudos/editar/(:num)', 'ConteudoController::editar/$1');
