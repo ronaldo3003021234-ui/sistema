@@ -10,7 +10,7 @@ $routes->get('/contato', 'ConteudoController::contato');
 // Rotas padrão do CodeIgniter Shield
 service('auth')->routes($routes);
 
-// Rotas protegidas que exigem autenticação por sessão (Listagem e Edição de Conteúdos)
+// Rotas protegidas públicas / gerais por sessão (se ainda usar)
 $routes->group('', ['filter' => 'session'], static function ($routes) {
     $routes->get('conteudos', 'ConteudoController::listar');
     $routes->get('conteudos/editar/(:num)', 'ConteudoController::editar/$1');
@@ -21,6 +21,13 @@ $routes->group('', ['filter' => 'session'], static function ($routes) {
 $routes->get('admin', 'Admin\Painel::index', [
     'filter' => ['session', 'group:admin'],
 ]);
+
+// Rotas administrativas de Conteúdos (ligadas ao Admin\Painel)
+$routes->group('admin', ['filter' => ['session', 'group:admin']], static function ($routes) {
+    $routes->get('conteudos', 'Admin\Painel::conteudos');
+    $routes->get('conteudos/editar/(:num)', 'Admin\Painel::editar/$1');
+    $routes->post('conteudos/atualizar/(:num)', 'Admin\Painel::atualizar/$1');
+});
 
 // Logout: aceita apenas usuários autenticados
 $routes->post('admin/sair', 'Admin\Painel::logout', [

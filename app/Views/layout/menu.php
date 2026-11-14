@@ -18,11 +18,14 @@
                         Home
                     </a>
                 </li>
+                
+                <!-- Botão do Painel Administrativo -->
                 <li class="nav-item">
-                    <a href="<?= site_url('conteudos') ?>" class="nav-link px-3 rounded <?= url_is('conteudos*') ? 'active bg-primary text-white shadow-sm' : 'text-light' ?>">
-                        Gerenciar Conteúdos
+                    <a href="<?= site_url('admin') ?>" class="nav-link px-3 rounded <?= url_is('admin*') ? 'active bg-warning text-dark shadow-sm' : 'text-warning fw-bold' ?>">
+                        Painel
                     </a>
                 </li>
+
                 <li class="nav-item">
                     <a href="<?= site_url('contato') ?>" class="nav-link px-3 rounded <?= url_is('contato') ? 'active bg-primary text-white shadow-sm' : 'text-light' ?>">
                         Contato

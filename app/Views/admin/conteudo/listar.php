@@ -1,4 +1,4 @@
-<?= $this->extend('admin/layout/main') ?>
+<?= $this->extend('/layout/main') ?>
 
 <?= $this->section('conteudo') ?>
     <h1>Conteúdos cadastrados</h1>
