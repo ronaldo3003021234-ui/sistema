@@ -23,7 +23,7 @@
     </nav>
     <main class="container">
         <h1>Painel administrativo</h1>
-        <p>Seja bem-vindo à área restrita. Escolha uma opção acima no menu para gerenciar o sistema com segurança.</p>
+        <p>Escolha uma opção no menu para continuar.</p>
     </main>
 </body>
 </html>

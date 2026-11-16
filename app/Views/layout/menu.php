@@ -38,11 +38,15 @@
                         Login
                     </a>
                 </li>
+
+                <!-- O botão Registrar aparece APENAS na Home -->
+                <?php if (url_is('home') || url_is('/')): ?>
                 <li class="nav-item">
                     <a href="<?= site_url('register') ?>" class="nav-link px-3 rounded <?= url_is('register') ? 'active bg-secondary text-white shadow-sm' : 'text-light' ?>">
                         Registrar
                     </a>
                 </li>
+                <?php endif; ?>
             </ul>
         </div>
     </div>
